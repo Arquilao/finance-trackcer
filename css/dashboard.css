@@ -1,0 +1,168 @@
+/* Dashboard Specific Styles */
+.dashboard-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.date-display {
+    color: #666;
+    font-size: 0.9rem;
+    background: #f8f9fa;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+    text-align: center;
+    border-left: 4px solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(75, 0, 130, 0.15);
+}
+
+.stat-card.income {
+    border-left-color: #28a745;
+}
+
+.stat-card.expense {
+    border-left-color: #dc3545;
+}
+
+.stat-card.balance {
+    border-left-color: #007bff;
+}
+
+.stat-card h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.stat-amount {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #4B0082;
+}
+
+.stat-amount.positive {
+    color: #28a745;
+}
+
+.stat-amount.negative {
+    color: #dc3545;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.navigation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.nav-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(75, 0, 130, 0.2);
+    border-color: #4B0082;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.nav-card h3 {
+    margin: 0 0 10px 0;
+    color: #4B0082;
+    font-size: 1.3rem;
+}
+
+.nav-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.dashboard-footer {
+    text-align: center;
+    padding: 30px 20px 20px;
+    margin-top: 50px;
+    border-top: 1px solid #E6E6FA;
+}
+
+.developer-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.developer-link:hover {
+    color: #4B0082;
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #999;
+    font-size: 0.8rem;
+    margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navigation-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-amount {
+        font-size: 1.7rem;
+    }
+}

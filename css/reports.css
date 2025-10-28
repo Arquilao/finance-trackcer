@@ -1,0 +1,101 @@
+.report-header {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+            margin-bottom: 25px;
+        }
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .summary-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(75, 0, 130, 0.1);
+            text-align: center;
+            border-left: 4px solid;
+        }
+        .summary-income { border-left-color: #28a745; }
+        .summary-expense { border-left-color: #dc3545; }
+        .summary-balance { border-left-color: #007bff; }
+        .summary-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .positive { color: #28a745; }
+        .negative { color: #dc3545; }
+        .report-filters {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+            margin-bottom: 25px;
+        }
+        .chart-container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+            margin-bottom: 25px;
+        }
+        .category-progress {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .category-bar {
+            height: 100%;
+            background: linear-gradient(135deg, #4B0082 0%, #9400D3 100%);
+            border-radius: 4px;
+        }
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Ensure proper printing and PDF export */
+@media print, (max-width: 768px) {
+    .navbar, .export-buttons, .report-filters, .btn-secondary {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .summary-cards {
+        grid-template-columns: 1fr !important;
+    }
+    
+    table {
+        page-break-inside: auto;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+}
