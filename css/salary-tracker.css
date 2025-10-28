@@ -1,0 +1,155 @@
+/* Salary Tracker Specific Styles */
+.income-type-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.income-tab {
+    padding: 12px 20px;
+    border: 2px solid #E6E6FA;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.income-tab.active {
+    border-color: #4B0082;
+    background: #F0E6FF;
+    font-weight: bold;
+}
+
+.income-form {
+    display: none;
+}
+
+.income-form.active {
+    display: block;
+}
+
+.rate-info {
+    background: #E6F7FF;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff;
+}
+
+.calculation-preview {
+    background: #F0E6FF;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #4B0082;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cancel {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-edit:hover {
+    background: #0056b3;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+.btn-cancel:hover {
+    background: #545b62;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(75, 0, 130, 0.1);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.peso-amount {
+    color: #4B0082;
+    font-weight: bold;
+}
+
+.edit-mode-banner {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #856404;
+}
+
+.exchange-rate-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+    margin-bottom: 25px;
+}
+
+/* Small buttons */
+.btn-small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    height: auto;
+}
+
+.btn-primary.btn-small {
+    background: #4B0082;
+    color: white;
+}
+
+.btn-secondary.btn-small {
+    background: #6c757d;
+    color: white;
+}

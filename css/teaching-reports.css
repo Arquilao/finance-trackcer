@@ -1,0 +1,215 @@
+/* Teaching Reports Specific Styles */
+.teaching-report-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+    margin-bottom: 25px;
+}
+
+.report-filters {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.1);
+    margin-bottom: 25px;
+}
+
+.student-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.student-stat-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #4B0082;
+}
+
+.income-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.income-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    text-align: center;
+}
+
+.teaching-income { 
+    border-left-color: #28a745; 
+}
+
+.gift-income { 
+    border-left-color: #ffc107; 
+}
+
+.total-income { 
+    border-left-color: #007bff; 
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.conversion-rate {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.report-title {
+    color: #4B0082;
+    border-bottom: 2px solid #4B0082;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.performance-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.metric-card {
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #007bff;
+}
+
+/* Export/Print Buttons */
+.export-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: flex-start;
+}
+
+.export-buttons .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Form group spacing */
+.report-filters .form-group {
+    margin-bottom: 15px;
+}
+
+/* Export Buttons - Matching reports.php design */
+.export-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.export-buttons .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-shadow: 0 2px 8px rgba(75, 0, 130, 0.15);
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+}
+
+.export-buttons .btn-secondary:hover {
+    background: linear-gradient(135deg, #5a6268 0%, #495057 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.25);
+}
+
+/* Print styles to hide buttons when printing */
+@media print {
+    .export-buttons, .btn-secondary {
+        display: none !important;
+    }
+}
+
+/* PDF Export and Print Styles */
+@media print, (max-width: 768px) {
+    .navbar, 
+    .export-buttons, 
+    .report-filters, 
+    .btn-secondary,
+    .action-buttons {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        background: white !important;
+        color: black !important;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .teaching-report-section,
+    .chart-container {
+        margin-bottom: 15px !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .student-stats,
+    .income-breakdown,
+    .performance-metrics {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    }
+    
+    table {
+        page-break-inside: auto;
+        font-size: 10pt !important;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    /* Ensure good contrast for print */
+    .summary-card,
+    .student-stat-card,
+    .income-card,
+    .metric-card {
+        background: #f8f9fa !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* Ensure proper styling for PDF export */
+.teaching-report-section {
+    break-inside: avoid;
+}
+
+.table-responsive {
+    overflow-x: visible !important;
+}
