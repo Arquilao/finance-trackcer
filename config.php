@@ -2,10 +2,10 @@
 session_start();
 
 // Database configuration
-$host = 'sql307.infinityfree.com';
-$username = 'if0_40265789';
-$password = 'HavirPia21';
-$database = 'if0_40265789_db_ftracker';
+$host = '';
+$username = '';
+$password = '';
+$database = '';
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $database);
