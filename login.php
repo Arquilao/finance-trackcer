@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($result->num_rows == 1) {
                 $user = $result->fetch_assoc();
                 
-                // For testing: If password is 'admin123', it should work
+                // For testing: If password is '#######', it should work
                 if ($password === '' || password_verify($password, $user['password'])) {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['username'] = $username;
